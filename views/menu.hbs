@@ -1,0 +1,30 @@
+<h1>Menu</h1>
+<a href="/"> main page </a>
+<a href="/about"> about</a>
+
+
+{{!-- в ставляем в шаблон --}}
+{{#if result.length}}
+{{#each result}}
+
+<div class="row">
+    <div class="col s12 m7">
+        <div class="card">
+            <div class="card-image">
+                <img src={{img}}>
+                <span class="card-title">{{title}}</span>
+            </div>
+            <div class="card-content">
+                {{price}}
+            </div>
+            <div class="card-action">
+                <a href="/menu/{{id}}">Открыть описание</a>
+                <a href="/menu/{{id}}/edit">Редактировать курс</a>
+            </div>
+        </div>
+    </div>
+</div>
+{{/each }}
+{{else}}
+<p>пока нету</p>
+{{/if}}

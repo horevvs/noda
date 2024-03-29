@@ -1,0 +1,27 @@
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo size">Hbs</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+
+             {{!-- // если тру тогда отображаеть если нето , то ниже  --}}
+            {{#if isMain }}
+            <li class="active"><a href="/">Main page</a></li>
+            {{else}}
+            <li><a href="/">Main page</a></li>
+            {{/if}}
+
+            {{#if isAbout }}
+            <li class="active"><a href="/about">About</a></li>
+            {{else}}
+            <li><a href="/about">About</a></li>
+            {{/if}}
+
+            {{#if isMenu }}
+            <li class="active"><a href="/menu">Menu</a></li>
+            {{else}}
+            <li><a href="/menu">Menu</a></li>
+            {{/if}}
+        </ul>
+    </div>
+</nav>
